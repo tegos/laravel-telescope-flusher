@@ -1,0 +1,50 @@
+{
+  "name": "tegos/laravel-telescope-flusher",
+  "description": "telescope-flusher is a Laravel package that provides a simple Artisan command to completely flush all Telescope data from the database",
+  "keywords": [
+    "tegos",
+    "laravel-telescope-flusher"
+  ],
+  "homepage": "https://github.com/tegos/laravel-telescope-flusher",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Ivan Mykhavko",
+      "email": "tegosiv@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "illuminate/support": "^9.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^7.0",
+    "phpunit/phpunit": "^9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tegos\\LaravelTelescopeFlusher\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tegos\\LaravelTelescopeFlusher\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Tegos\\LaravelTelescopeFlusher\\LaravelTelescopeFlusherServiceProvider"
+      ]
+    }
+  }
+}
