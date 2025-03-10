@@ -3,7 +3,7 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/tegos/laravel-telescope-flusher.svg?style=flat-square)](https://packagist.org/packages/tegos/laravel-telescope-flusher)
 [![Total Downloads](https://img.shields.io/packagist/dt/tegos/laravel-telescope-flusher.svg?style=flat-square)](https://packagist.org/packages/tegos/laravel-telescope-flusher)
 [![PHP Version](https://img.shields.io/badge/PHP-8.1%2B-blue)](https://www.php.net/)
-[![Laravel Version](https://img.shields.io/badge/Laravel-9%2B-brightgreen)](https://laravel.com/)
+[![Laravel Version](https://img.shields.io/badge/Laravel-10%2B-brightgreen)](https://laravel.com/)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.md)
 
 ![Laravel Telescope Flusher](assets/poster.jpg)
