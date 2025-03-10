@@ -10,6 +10,8 @@ final class TelescopeFlushCommandTest extends TestCase
     public function test_telescope_flush_command_runs_in_local_environment(): void
     {
         App::shouldReceive('isLocal')->once()->andReturn(true);
+
+        DB::shouldReceive('getSchemaBuilder->hasTable')->andReturn(true);
         DB::shouldReceive('getSchemaBuilder->withoutForeignKeyConstraints')->once()->andReturnUsing(function ($callback) {
             $callback();
         });

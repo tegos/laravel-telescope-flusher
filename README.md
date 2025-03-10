@@ -1,15 +1,15 @@
-# Very short description of the package
+# Laravel Telescope Flusher
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/tegos/laravel-telescope-flusher.svg?style=flat-square)](https://packagist.org/packages/tegos/laravel-telescope-flusher)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/tegos/laravel-telescope-flusher.svg?style=flat-square)](https://packagist.org/packages/tegos/laravel-telescope-flusher)  
 [![Total Downloads](https://img.shields.io/packagist/dt/tegos/laravel-telescope-flusher.svg?style=flat-square)](https://packagist.org/packages/tegos/laravel-telescope-flusher)
-![GitHub Actions](https://github.com/tegos/laravel-telescope-flusher/actions/workflows/main.yml/badge.svg)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+**Laravel Telescope Flusher** is a simple package that provides an Artisan command to completely flush all Telescope
+data from your database. It ensures a clean slate for debugging and monitoring while preventing execution in production
+environments.
 
 ## Installation
 
-You can install the package via composer:
+You can install the package via Composer:
 
 ```bash
 composer require tegos/laravel-telescope-flusher
@@ -17,34 +17,40 @@ composer require tegos/laravel-telescope-flusher
 
 ## Usage
 
-```php
-// Usage description here
+Once installed, you can run the following command to flush Telescope data:
+
+```bash
+php artisan telescope:flush
 ```
 
+### Behavior
+
+- ✅ Only runs in **local** environments (prevents accidental execution in production).
+- ✅ Checks if **Telescope is installed** before running.
+- ✅ Truncates all Telescope-related tables.
+- ✅ Optimizes the `telescope_entries` table (MySQL).
+
 ### Testing
+
+You can run tests using:
 
 ```bash
 composer test
 ```
 
-### Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
 ## Contributing
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](CONTRIBUTING.md) for contribution guidelines.
 
-### Security
+## Security
 
-If you discover any security related issues, please email tegosiv@gmail.com instead of using the issue tracker.
+If you discover any security-related issues, please email **tegosiv@gmail.com** instead of using the issue tracker.
 
 ## Credits
 
-- [Ivan Mykhavko](https://github.com/tegos)
-- [All Contributors](../../contributors)
+- **[Ivan Mykhavko](https://github.com/tegos)**
+- **[All Contributors](../../contributors)**
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
+This package is open-source software licensed under the **MIT License**. See [LICENSE](LICENSE.md) for details.  
