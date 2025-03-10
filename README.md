@@ -3,7 +3,7 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/tegos/laravel-telescope-flusher.svg?style=flat-square)](https://packagist.org/packages/tegos/laravel-telescope-flusher)
 [![Total Downloads](https://img.shields.io/packagist/dt/tegos/laravel-telescope-flusher.svg?style=flat-square)](https://packagist.org/packages/tegos/laravel-telescope-flusher)
 
-![Laravel request logger](assets/poster.jpg)
+![Laravel Telescope Flusher](assets/poster.jpg)
 
 **Laravel Telescope Flusher** is a simple package that provides an Artisan command to completely flush all Telescope
 data from your database. It ensures a clean slate for debugging and monitoring while preventing execution in production
@@ -59,7 +59,7 @@ This package is open-source software licensed under the **MIT License**. See [LI
 
 ---
 
-<p>
+<p align="center">
   <a href="https://savelife.in.ua/en/donate-en/" target="_blank">
     <img src="./assets/come-back-alive.svg" alt="Donate"/>
   </a>
