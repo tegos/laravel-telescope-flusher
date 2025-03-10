@@ -17,7 +17,7 @@ environments.
 You can install the package via Composer:
 
 ```bash
-composer require tegos/laravel-telescope-flusher
+composer require tegos/laravel-telescope-flusher --dev
 ```
 
 ## Usage
