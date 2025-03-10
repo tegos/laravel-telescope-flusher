@@ -21,6 +21,12 @@ final class TelescopeFlushCommand extends Command
             return self::INVALID;
         }
 
+        // Check if Telescope tables exist
+        if (!$this->isTelescopeInstalled()) {
+            $this->error('Telescope is not installed or its tables are missing.');
+            return self::FAILURE;
+        }
+
         DB::getSchemaBuilder()->withoutForeignKeyConstraints(function () {
             DB::table('telescope_entries')->truncate();
             DB::table('telescope_entries_tags')->truncate();
@@ -35,5 +41,12 @@ final class TelescopeFlushCommand extends Command
         $this->info('Telescope entries cleared!');
 
         return self::SUCCESS;
+    }
+
+    private function isTelescopeInstalled(): bool
+    {
+        return DB::getSchemaBuilder()->hasTable('telescope_entries') &&
+            DB::getSchemaBuilder()->hasTable('telescope_entries_tags') &&
+            DB::getSchemaBuilder()->hasTable('telescope_monitoring');
     }
 }
