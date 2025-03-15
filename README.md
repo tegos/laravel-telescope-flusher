@@ -12,6 +12,8 @@
 data from your database. It ensures a clean slate for debugging and monitoring while preventing execution in production
 environments.
 
+[Efficiently Managing Telescope Entries with Laravel-Telescope-Flusher](https://dev.to/tegos/efficiently-managing-telescope-entries-with-laravel-telescope-flusher-484a)
+
 ## Installation
 
 You can install the package via Composer:
