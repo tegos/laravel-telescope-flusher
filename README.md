@@ -1,14 +1,30 @@
-# Laravel Telescope Flusher
+<h1 align="center">Laravel Telescope Flusher</h1>
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/tegos/laravel-telescope-flusher.svg?style=flat-square)](https://packagist.org/packages/tegos/laravel-telescope-flusher)
-[![Total Downloads](https://img.shields.io/packagist/dt/tegos/laravel-telescope-flusher.svg?style=flat-square)](https://packagist.org/packages/tegos/laravel-telescope-flusher)
-[![PHP Version](https://img.shields.io/badge/PHP-8.1%2B-blue)](https://www.php.net/)
-[![Laravel Version](https://img.shields.io/badge/Laravel-10%2B-brightgreen)](https://laravel.com/)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.md)
+<p align="center">
+Flush all Laravel Telescope data safely in local environments.
+</p>
 
-![Laravel Telescope Flusher](assets/poster.jpg)
+<p align="center">
+  <a href="https://packagist.org/packages/tegos/laravel-telescope-flusher">
+    <img src="https://img.shields.io/packagist/v/tegos/laravel-telescope-flusher.svg" alt="Latest Version on Packagist">
+  </a>
+  <a href="https://packagist.org/packages/tegos/laravel-telescope-flusher">
+    <img src="https://img.shields.io/packagist/dt/tegos/laravel-telescope-flusher.svg" alt="Total Downloads">
+  </a>
+  <a href="https://www.php.net/">
+    <img src="https://img.shields.io/badge/PHP-8.1%2B-blue" alt="PHP Version">
+  </a>
+  <a href="https://laravel.com/">
+    <img src="https://img.shields.io/badge/Laravel-10%2B-brightgreen" alt="Laravel Version">
+  </a>
+  <a href="LICENSE.md">
+    <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="Software License">
+  </a>
+</p>
 
-**Laravel Telescope Flusher** is a simple package that provides an Artisan command to completely flush all Telescope
+------
+
+**Laravel Telescope Flusher** is a simple package that provides laravel artisan command to completely flush all telescope
 data from your database. It ensures a clean slate for debugging and monitoring while preventing execution in production
 environments.
 
