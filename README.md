@@ -5,21 +5,11 @@ Flush all Laravel Telescope data safely in local environments.
 </p>
 
 <p align="center">
-  <a href="https://packagist.org/packages/tegos/laravel-telescope-flusher">
-    <img src="https://img.shields.io/packagist/v/tegos/laravel-telescope-flusher.svg" alt="Latest Version on Packagist">
-  </a>
-  <a href="https://packagist.org/packages/tegos/laravel-telescope-flusher">
-    <img src="https://img.shields.io/packagist/dt/tegos/laravel-telescope-flusher.svg" alt="Total Downloads">
-  </a>
-  <a href="https://www.php.net/">
-    <img src="https://img.shields.io/badge/PHP-8.1%2B-blue" alt="PHP Version">
-  </a>
-  <a href="https://laravel.com/">
-    <img src="https://img.shields.io/badge/Laravel-10%2B-brightgreen" alt="Laravel Version">
-  </a>
-  <a href="LICENSE.md">
-    <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="Software License">
-  </a>
+  <a href="https://packagist.org/packages/tegos/laravel-telescope-flusher"><img src="https://img.shields.io/packagist/v/tegos/laravel-telescope-flusher.svg" alt="Latest Version on Packagist"></a>
+  <a href="https://packagist.org/packages/tegos/laravel-telescope-flusher"><img src="https://img.shields.io/packagist/dt/tegos/laravel-telescope-flusher.svg" alt="Total Downloads"></a>
+  <a href="https://www.php.net/"><img src="https://img.shields.io/badge/PHP-8.1%2B-blue" alt="PHP Version"></a>
+  <a href="https://laravel.com/"><img src="https://img.shields.io/badge/Laravel-10%2B-brightgreen" alt="Laravel Version"></a>
+  <a href="LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="Software License"></a>
 </p>
 
 ------
