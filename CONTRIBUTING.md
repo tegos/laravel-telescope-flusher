@@ -12,7 +12,7 @@ Please review these guidelines before submitting any pull requests.
 
 ## Guidelines
 
-* Please follow the [PSR-2 Coding Style Guide](http://www.php-fig.org/psr/psr-2).
+* Please follow the [PSR-12: Extended Coding Style](https://www.php-fig.org/psr/psr-12/).
 * Send a coherent commit history, making sure each commit in your pull request is meaningful.
 * You may need to [rebase](https://git-scm.com/book/en/v2/Git-Branching-Rebasing) to avoid merge conflicts.
 * Please remember that we follow [SemVer](http://semver.org).
