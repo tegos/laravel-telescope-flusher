@@ -51,6 +51,33 @@ You can run tests using:
 composer test
 ```
 
+### Running Tests in Docker
+
+Start the containers:
+
+```bash
+docker compose up -d
+docker compose exec app composer install
+```
+
+Run all tests:
+
+```bash
+docker compose exec app composer test
+```
+
+Run only unit tests:
+
+```bash
+docker compose exec app vendor/bin/phpunit --testsuite Unit
+```
+
+Run only integration tests (requires Docker):
+
+```bash
+docker compose exec app vendor/bin/phpunit --testsuite Integration
+```
+
 ## Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for contribution guidelines.
