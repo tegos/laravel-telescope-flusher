@@ -51,6 +51,14 @@ You can run tests using:
 composer test
 ```
 
+### Running Tests in Docker
+
+```bash
+docker compose up -d
+docker compose exec app composer install
+docker compose exec app composer test
+```
+
 ## Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for contribution guidelines.
