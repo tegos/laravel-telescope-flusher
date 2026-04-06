@@ -4,8 +4,12 @@
          bootstrap="vendor/autoload.php" colors="true" executionOrder="random" failOnWarning="true" failOnRisky="true"
          failOnEmptyTestSuite="true" cacheDirectory=".phpunit.cache" backupStaticProperties="false">
     <testsuites>
-        <testsuite name="Laravel Telescope Flusher Test Suite">
+        <testsuite name="Unit">
             <directory>tests</directory>
+            <exclude>tests/Integration</exclude>
+        </testsuite>
+        <testsuite name="Integration">
+            <directory>tests/Integration</directory>
         </testsuite>
     </testsuites>
     <source>
@@ -13,4 +17,11 @@
             <directory suffix=".php">./src</directory>
         </include>
     </source>
+    <php>
+        <env name="DB_HOST" value="mysql"/>
+        <env name="DB_PORT" value="3306"/>
+        <env name="DB_DATABASE" value="telescope_test"/>
+        <env name="DB_USERNAME" value="telescope"/>
+        <env name="DB_PASSWORD" value="secret"/>
+    </php>
 </phpunit>
