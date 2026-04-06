@@ -56,9 +56,7 @@ composer test
 ```bash
 docker compose up -d
 docker compose exec app composer install
-docker compose exec app composer test                                          # all tests
-docker compose exec app vendor/bin/phpunit --testsuite Unit                   # unit only
-docker compose exec app vendor/bin/phpunit --testsuite Integration            # integration only
+docker compose exec app composer test
 ```
 
 ## Contributing
