@@ -15,7 +15,7 @@ abstract class IntegrationTestCase extends OrchestraTestCase
 
     protected function getEnvironmentSetUp($app): void
     {
-        $app['config']->set('app.env', 'local');
+        $app['env'] = 'local';
         $app['config']->set('database.default', 'mysql');
         $app['config']->set('database.connections.mysql', [
             'driver'    => 'mysql',
