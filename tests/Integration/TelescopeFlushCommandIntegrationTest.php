@@ -3,7 +3,7 @@
 namespace Tegos\LaravelTelescopeFlusher\Tests\Integration;
 
 use Illuminate\Support\Facades\DB;
-use Tegos\LaravelTelescopeFlusher\Tests\IntegrationTestCase;
+use Tegos\LaravelTelescopeFlusher\Tests\Integration\IntegrationTestCase;
 
 final class TelescopeFlushCommandIntegrationTest extends IntegrationTestCase
 {

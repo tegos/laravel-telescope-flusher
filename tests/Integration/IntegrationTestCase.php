@@ -1,6 +1,6 @@
 <?php
 
-namespace Tegos\LaravelTelescopeFlusher\Tests;
+namespace Tegos\LaravelTelescopeFlusher\Tests\Integration;
 
 use Illuminate\Support\Facades\Schema;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
