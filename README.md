@@ -1,7 +1,10 @@
 <h1 align="center">Laravel Telescope Flusher</h1>
 
 <p align="center">
-Flush all Laravel Telescope data safely in local environments.
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.webp">
+    <img src="assets/banner-light.webp" alt="Laravel Telescope Flusher Banner">
+  </picture>
 </p>
 
 <p align="center">
