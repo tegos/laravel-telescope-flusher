@@ -18,7 +18,7 @@
 
 **Laravel Telescope Flusher** is a Laravel package providing an Artisan command that completely wipes all Telescope
 data and reclaims disk space. Unlike `telescope:prune` (which deletes by age), it truncates every Telescope table and
-runs `OPTIMIZE TABLE` on MySQL to release storage back to the engine. Production execution is blocked by design.
+runs `OPTIMIZE TABLE` on MySQL to release storage back to the engine.
 
 Useful when `telescope_entries` grows to multi-GB sizes from heavy jobs or long development sessions.
 
@@ -32,7 +32,7 @@ Useful when `telescope_entries` grows to multi-GB sizes from heavy jobs or long 
 
 Read more:
 
-- [Why `telescope:clear` Is Slow and How to Reclaim Disk in Seconds](https://dev.to/tegos/) - the benchmark deep-dive
+- [Why `telescope:clear` Is Slow and How to Reclaim Disk in Seconds](https://dev.to/tegos/why-telescopeclear-is-slow-and-how-to-reclaim-disk-in-seconds-26of) - the benchmark deep-dive
 - [Efficiently Managing Telescope Entries with Laravel-Telescope-Flusher](https://dev.to/tegos/efficiently-managing-telescope-entries-with-laravel-telescope-flusher-484a) - the original post
 
 ## Installation
@@ -61,8 +61,8 @@ php artisan telescope:flush
 - Optimizes the `telescope_entries` table (MySQL).
 
 > Compared to `telescope:prune` (deletes rows older than `--hours`) and `telescope:clear` (slow row-by-row `DELETE`),
-> `telescope:flush` uses `TRUNCATE` for speed and `OPTIMIZE TABLE` to reclaim disk, InnoDB does not return space to
-> the OS after `DELETE`, only marks it reusable.
+> `telescope:flush` uses `TRUNCATE` for speed and `OPTIMIZE TABLE` to reclaim disk. InnoDB does not return space to
+> the OS after `DELETE`; it only marks it reusable.
 
 ## Testing
 
