@@ -22,7 +22,18 @@ runs `OPTIMIZE TABLE` on MySQL to release storage back to the engine. Production
 
 Useful when `telescope_entries` grows to multi-GB sizes from heavy jobs or long development sessions.
 
-[Efficiently Managing Telescope Entries with Laravel-Telescope-Flusher](https://dev.to/tegos/efficiently-managing-telescope-entries-with-laravel-telescope-flusher-484a)
+<p align="center">
+  <img src="assets/flush-demo.gif" alt="telescope:clear vs telescope:flush, 1M entries benchmark" width="720">
+</p>
+
+> Benchmark on 1,000,000 entries / 3,000,000 tags (MySQL 8.0): `telescope:clear` takes
+> ~150 minutes and leaves 3.1 GB locked in `.ibd` files. `telescope:flush` finishes
+> in 1.21 seconds and shrinks the files to 428 KB. Reproduction script in [`bench/`](bench/).
+
+Read more:
+
+- [Why `telescope:clear` Is Slow and How to Reclaim Disk in Seconds](https://dev.to/tegos/) - the benchmark deep-dive
+- [Efficiently Managing Telescope Entries with Laravel-Telescope-Flusher](https://dev.to/tegos/efficiently-managing-telescope-entries-with-laravel-telescope-flusher-484a) - the original post
 
 ## Installation
 
@@ -50,7 +61,7 @@ php artisan telescope:flush
 - Optimizes the `telescope_entries` table (MySQL).
 
 > Compared to `telescope:prune` (deletes rows older than `--hours`) and `telescope:clear` (slow row-by-row `DELETE`),
-> `telescope:flush` uses `TRUNCATE` for speed and `OPTIMIZE TABLE` to reclaim disk — InnoDB does not return space to
+> `telescope:flush` uses `TRUNCATE` for speed and `OPTIMIZE TABLE` to reclaim disk, InnoDB does not return space to
 > the OS after `DELETE`, only marks it reusable.
 
 ## Testing
