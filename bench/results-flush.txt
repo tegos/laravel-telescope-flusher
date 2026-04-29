@@ -1,0 +1,55 @@
+==================== telescope:flush (TRUNCATE all + OPTIMIZE TABLE) ====================
+[reset]
+tables dropped
+tables created
+[seed N=1000000]
+seeded 50000 / 1000000 (4524 rows/s, 11.1s)
+seeded 100000 / 1000000 (3765 rows/s, 26.6s)
+seeded 150000 / 1000000 (3539 rows/s, 42.4s)
+seeded 200000 / 1000000 (3323 rows/s, 60.2s)
+seeded 250000 / 1000000 (3254 rows/s, 76.8s)
+seeded 300000 / 1000000 (3184 rows/s, 94.2s)
+seeded 350000 / 1000000 (3106 rows/s, 112.7s)
+seeded 400000 / 1000000 (3049 rows/s, 131.2s)
+seeded 450000 / 1000000 (2983 rows/s, 150.9s)
+seeded 500000 / 1000000 (2940 rows/s, 170.1s)
+seeded 550000 / 1000000 (2877 rows/s, 191.2s)
+seeded 600000 / 1000000 (2828 rows/s, 212.2s)
+seeded 650000 / 1000000 (2762 rows/s, 235.4s)
+seeded 700000 / 1000000 (2670 rows/s, 262.2s)
+seeded 750000 / 1000000 (2583 rows/s, 290.4s)
+seeded 800000 / 1000000 (2517 rows/s, 317.9s)
+seeded 850000 / 1000000 (2435 rows/s, 349.0s)
+seeded 900000 / 1000000 (2355 rows/s, 382.2s)
+seeded 950000 / 1000000 (2292 rows/s, 414.6s)
+seeded 1000000 / 1000000 (2239 rows/s, 446.6s)
+seed done in 446.6s
+[finalize: add indexes + FK]
+indexes + FK added in 736.3s
+[before — info_schema]
+telescope_entries          rows=1000000    size=2.33 GB    free=0 B
+telescope_entries_tags     rows=3000000    size=672.55 MB  free=0 B
+telescope_monitoring       rows=50         size=16.00 KB   free=0 B
+TOTAL                      rows=4000050    size=2.99 GB
+[before — disk .ibd files]
+total 3.1G
+drwxr-x--- 2 mysql mysql 4.0K Apr 28 23:15 .
+drwxrwxrwt 8 mysql mysql 4.0K Apr 28 23:03 ..
+-rw-r----- 1 mysql mysql 2.4G Apr 28 23:04 telescope_entries.ibd
+-rw-r----- 1 mysql mysql 688M Apr 28 23:16 telescope_entries_tags.ibd
+-rw-r----- 1 mysql mysql 112K Apr 28 23:03 telescope_monitoring.ibd
+[run: flush]
+telescope:flush simulation finished in 1.21s
+[after — info_schema]
+telescope_entries          rows=0          size=64.00 KB   free=0 B
+telescope_entries_tags     rows=0          size=48.00 KB   free=0 B
+telescope_monitoring       rows=0          size=16.00 KB   free=0 B
+TOTAL                      rows=0          size=128.00 KB
+[after — disk .ibd files]
+total 428K
+drwxr-x--- 2 mysql mysql 4.0K Apr 28 23:16 .
+drwxrwxrwt 8 mysql mysql 4.0K Apr 28 23:03 ..
+-rw-r----- 1 mysql mysql 160K Apr 28 23:16 telescope_entries.ibd
+-rw-r----- 1 mysql mysql 144K Apr 28 23:16 telescope_entries_tags.ibd
+-rw-r----- 1 mysql mysql 112K Apr 28 23:16 telescope_monitoring.ibd
+DONE

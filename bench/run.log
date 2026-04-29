@@ -1,0 +1,42 @@
+tee: /app/bench/results.txt: No such file or directory
+==================== telescope:clear (chunked DELETE 1000 on entries+monitoring) ====================
+[reset]
+tables dropped
+tables created
+[seed N=1000000]
+seeded 50000 / 1000000 (4566 rows/s, 10.9s)
+seeded 100000 / 1000000 (3740 rows/s, 26.7s)
+seeded 150000 / 1000000 (3289 rows/s, 45.6s)
+seeded 200000 / 1000000 (3075 rows/s, 65.0s)
+seeded 250000 / 1000000 (3047 rows/s, 82.1s)
+seeded 300000 / 1000000 (2975 rows/s, 100.8s)
+seeded 350000 / 1000000 (2946 rows/s, 118.8s)
+seeded 400000 / 1000000 (2900 rows/s, 137.9s)
+seeded 450000 / 1000000 (2839 rows/s, 158.5s)
+seeded 500000 / 1000000 (2809 rows/s, 178.0s)
+seeded 550000 / 1000000 (2784 rows/s, 197.5s)
+seeded 600000 / 1000000 (2730 rows/s, 219.8s)
+seeded 650000 / 1000000 (2683 rows/s, 242.3s)
+seeded 700000 / 1000000 (2615 rows/s, 267.7s)
+seeded 750000 / 1000000 (2544 rows/s, 294.8s)
+seeded 800000 / 1000000 (2447 rows/s, 326.9s)
+seeded 850000 / 1000000 (2376 rows/s, 357.7s)
+seeded 900000 / 1000000 (2296 rows/s, 392.0s)
+seeded 950000 / 1000000 (2231 rows/s, 425.8s)
+seeded 1000000 / 1000000 (2176 rows/s, 459.5s)
+seed done in 459.6s
+[finalize: add indexes + FK]
+indexes + FK added in 785.2s
+[before]
+telescope_entries          rows=1000000    size=2.33 GB    free=0 B
+telescope_entries_tags     rows=3000000    size=672.55 MB  free=0 B
+telescope_monitoring       rows=50         size=16.00 KB   free=0 B
+TOTAL                      rows=4000050    size=2.99 GB
+[run: clear]
+telescope:clear simulation finished in 9025.34s
+[after]
+telescope_entries          rows=0          size=64.00 KB   free=0 B
+telescope_entries_tags     rows=0          size=48.00 KB   free=0 B
+telescope_monitoring       rows=0          size=16.00 KB   free=0 B
+TOTAL                      rows=0          size=128.00 KB
+
