@@ -12,6 +12,7 @@
   <a href="https://www.php.net/"><img src="https://img.shields.io/badge/PHP-8.1%2B-blue" alt="PHP Version"></a>
   <a href="https://laravel.com/"><img src="https://img.shields.io/badge/Laravel-10%2B-brightgreen" alt="Laravel Version"></a>
   <a href="LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="Software License"></a>
+  <a href="https://plumbphp.dev/tegos/laravel-telescope-flusher"><img src="https://plumbphp.dev/badges/tegos/laravel-telescope-flusher/scanned.svg" alt="Scanned by Plumb"></a>
 </p>
 
 ------
