@@ -40,7 +40,8 @@ jobs:
           extensions: pdo_mysql
 
       - name: Install dependencies
-        run: composer install --no-interaction --prefer-dist
+        # testbench ^8 pins Laravel 10, whose releases all carry advisories now
+        run: composer install --no-interaction --prefer-dist --no-blocking
 
       - name: Run unit tests
         run: vendor/bin/phpunit --testsuite Unit
